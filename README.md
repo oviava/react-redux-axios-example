@@ -12,3 +12,7 @@ http://codepen.io/MattIn4D/pen/LiKFC for spinner
 [Will Becker](https://medium.com/lexical-labs-engineering/redux-best-practices-64d59775802e) this post got me making this
 
 [RestCountries](https://restcountries.eu) for their API
+
+
+
+License MIT
