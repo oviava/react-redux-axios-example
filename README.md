@@ -13,4 +13,6 @@ http://codepen.io/MattIn4D/pen/LiKFC for spinner
 
 [RestCountries](https://restcountries.eu) for their API
 
-LICENCE MIT
+
+
+License MIT
