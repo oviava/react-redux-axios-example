@@ -10,7 +10,6 @@ class Error extends Component{
 
 	render() {
 		const {data} = this.props;
-		console.log(data);
 		return (
 			<div className="row">
 				<div className="col-md-12">
