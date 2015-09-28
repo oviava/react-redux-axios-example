@@ -1,8 +1,5 @@
 import React, {Component} from 'react';
 
-import {connect} from 'react-redux';
-
-@connect(state => (state.example))
 class Spinner extends Component{
 	constructor(props){
 		super(props);

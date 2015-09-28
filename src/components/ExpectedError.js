@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
 
-import {connect} from 'react-redux';
-
 class ExpectedError extends Component{
 	constructor(props){
 		super(props);

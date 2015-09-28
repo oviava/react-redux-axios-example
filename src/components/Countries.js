@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
-
 import {connect} from 'react-redux';
-
 import Country from './Country';
 
 @connect(state => ({data: state.example.data}))
