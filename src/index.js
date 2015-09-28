@@ -18,12 +18,12 @@ const history = new createBrowserHistory();
 const store = configureStore();
 
 function loadData() {
-	store.dispatch(fetchData(history,'https://restcountries.eu/rest/v1/all'));
+	store.dispatch(fetchData('https://restcountries.eu/rest/v1/all'));
 };
 
 //we expect this to fail and get forwarded to the error page
 function loadBadData(){
-	store.dispatch(fetchData(history, 'https://restcountries.eu/rest/v1/callingcode/123123'));
+	store.dispatch(fetchData('https://restcountries.eu/rest/v1/callingcode/123123'));
 };
 
 React.render(

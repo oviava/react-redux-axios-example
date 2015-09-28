@@ -20,7 +20,7 @@ function receiveError(json) {
 	}
 };
 
-export function fetchData(history, url) {
+export function fetchData(url) {
 	return function(dispatch) {
 		dispatch(requestData());
 		return axios({
