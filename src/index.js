@@ -41,5 +41,5 @@ React.render(
 			</ReduxRouter>
 		}
 	</Provider>,
-	document.body
+	document.getElementById('root')
 );
