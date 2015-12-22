@@ -28,9 +28,9 @@
   },
   "homepage": "https://github.com/oviava/react-redux-axios-example",
   "devDependencies": {
-    "babel-core": "latest",
+    "babel-core": "5.x",
     "babel-eslint": "latest",
-    "babel-loader": "latest",
+    "babel-loader": "5.x",
     "css-loader": "latest",
     "eslint": "latest",
     "eslint-plugin-react": "latest",
@@ -47,8 +47,9 @@
   "dependencies": {
     "axios": "latest",
     "bootstrap": "^3.3.5",
-    "history": "^1.9.1",
+    "history": "1.13.x",
     "react": "latest",
+    "react-dom": "^0.14.3",
     "react-redux": "latest",
     "react-router": "latest",
     "redux": "latest",
