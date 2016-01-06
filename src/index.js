@@ -1,6 +1,8 @@
 import 'babel-core/polyfill';
 
 import React from 'react';
+import ReactDOM from 'react-dom';
+
 
 import { Provider } from 'react-redux';
 import { Router, Route, IndexRoute } from 'react-router';
@@ -26,20 +28,18 @@ function loadBadData(){
 	store.dispatch(fetchData('https://restcountries.eu/rest/v1/callingcode/123123'));
 };
 
-React.render(
+ReactDOM.render(
 	<Provider store={store}>
-		{() =>
-			<ReduxRouter>
-				<Route history={history}>
-					<Route component={App}>
-						<Route path='/' component={Home} />
-						<Route path='/countries' component={Countries} onEnter={loadData} />
-						<Route path='/othercountry' component={ExpectedError} onEnter={loadBadData} />
-						<Route path='/error' component={Error} />
-					</Route>
+		<ReduxRouter>
+			<Route history={history}>
+				<Route component={App}>
+					<Route path='/' component={Home} />
+					<Route path='/countries' component={Countries} onEnter={loadData} />
+					<Route path='/othercountry' component={ExpectedError} onEnter={loadBadData} />
+					<Route path='/error' component={Error} />
 				</Route>
-			</ReduxRouter>
-		}
+			</Route>
+		</ReduxRouter>
 	</Provider>,
 	document.getElementById('root')
 );
