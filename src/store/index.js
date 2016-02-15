@@ -9,7 +9,8 @@ import createHistory from 'history/lib/createBrowserHistory';
 
 const createAppStore = compose(
 	applyMiddleware(thunkMiddleware),
-	reduxReactRouter({createHistory})
+	reduxReactRouter({createHistory}),
+  window.devToolsExtension ? window.devToolsExtension() : f => f
 )(createStore);
 
 export default function configureStore(initialState){
