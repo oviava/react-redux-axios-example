@@ -10,11 +10,11 @@ function exampleReducer(state = {
 , action = null) {
 	switch(action.type) {
 		case types.RECV_ERROR:
-			return Object.assign({}, state, {isLoading: false, data: action.data, error: true});
+			return {...state, isLoading: false, data: action.data, error: true};
 		case types.RECV_DATA:
-			return Object.assign({}, state, {isLoading: false, data: action.data, error: false });
+			return {...state, isLoading: false, data: action.data, error: false };
 		case types.REQ_DATA:
-			return Object.assign({}, state, {isLoading: true, error: false });
+			return {...state, isLoading: true, error: false };
 		default:
 			return state;
 	}
