@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Example async data fetch with spinner",
   "scripts": {
-    "start": "node webpack/server.js",
+    "start": "react-scripts start",
     "lint": "eslint src"
   },
   "repository": {
@@ -28,32 +28,21 @@
   },
   "homepage": "https://github.com/oviava/react-redux-axios-example",
   "devDependencies": {
-    "babel-core": "5.x",
-    "babel-eslint": "latest",
-    "babel-loader": "5.x",
-    "css-loader": "latest",
-    "eslint": "latest",
-    "eslint-plugin-react": "latest",
-    "extract-text-webpack-plugin": "latest",
-    "file-loader": "latest",
-    "react-hot-loader": "latest",
-    "redux-devtools": "^2.1.2",
-    "style-loader": "latest",
-    "url-loader": "latest",
-    "webpack": "latest",
-    "webpack-dev-server": "latest",
-    "raw-loader": "latest"
+    "eslint": "^5.4.0",
+    "react-scripts": "^1.1.5",
+    "redux-devtools": "^3.4.1"
   },
   "dependencies": {
-    "axios": "latest",
+    "axios": "^0.18.0",
     "bootstrap": "^3.3.5",
-    "history": "1.13.x",
-    "react": "latest",
-    "react-dom": "^0.14.3",
-    "react-redux": "latest",
-    "react-router": "latest",
-    "redux": "latest",
-    "redux-react-router": "latest",
-    "redux-thunk": "latest"
+    "connected-react-router": "^4.4.1",
+    "history": "^4.7.2",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-redux": "^5.0.7",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "redux": "^4.0.0",
+    "redux-thunk": "^2.3.0"
   }
 }

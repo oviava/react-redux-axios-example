@@ -1,45 +1,35 @@
-import 'babel-core/polyfill';
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-
 import { Provider } from 'react-redux';
-import { Router, Route, IndexRoute } from 'react-router';
-import { reduxReactRouter, routerStateReducer, ReduxRouter } from 'redux-react-router';
-import createBrowserHistory from 'history/lib/createBrowserHistory';
+import { Route, Switch } from 'react-router-dom';
+import { createBrowserHistory } from 'history';
+import { ConnectedRouter } from 'connected-react-router';
+
 import configureStore from './store';
 import App from './containers/App';
 import Countries from './components/Countries';
 import Error from './components/Error';
 import ExpectedError from './components/ExpectedError';
 import Home from './components/Home';
-import {fetchData} from './actions/actions';
+import { fetchData } from './actions/actions';
 
-const history = new createBrowserHistory();
-const store = configureStore();
+const history = createBrowserHistory();
 
-function loadData() {
-	store.dispatch(fetchData('https://restcountries.eu/rest/v1/all'));
-};
-
-//we expect this to fail and get forwarded to the error page
-function loadBadData(){
-	store.dispatch(fetchData('https://restcountries.eu/rest/v1/callingcode/123123'));
-};
+const store = configureStore(history, {});
 
 ReactDOM.render(
-	<Provider store={store}>
-		<ReduxRouter>
-			<Route history={history}>
-				<Route component={App}>
-					<Route path='/' component={Home} />
-					<Route path='/countries' component={Countries} onEnter={loadData} />
-					<Route path='/othercountry' component={ExpectedError} onEnter={loadBadData} />
-					<Route path='/error' component={Error} />
-				</Route>
-			</Route>
-		</ReduxRouter>
-	</Provider>,
-	document.getElementById('root')
+  <Provider store={store}>
+    <ConnectedRouter history={history}>
+      <App>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/countries" component={Countries} />
+          <Route path="/othercountry" component={ExpectedError} />
+          <Route path="/error" component={Error} />
+        </Switch>
+      </App>
+    </ConnectedRouter>
+  </Provider>,
+  document.getElementById('root')
 );

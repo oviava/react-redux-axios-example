@@ -1,8 +1,4 @@
 {
-  "ecmaFeatures": {
-    "jsx": true,
-    "modules": true
-  },
   "env": {
     "browser": true,
     "node": true
@@ -10,14 +6,7 @@
   "parser": "babel-eslint",
   "rules": {
     "quotes": [2, "single"],
-    "strict": [2, "never"],
-    "react/jsx-uses-react": 2,
-    "react/jsx-uses-vars": 2,
-    "react/react-in-jsx-scope": 2,
-    "react/wrap-multilines": 1,
-    "react/prop-types": 1
+    "strict": [2, "never"]
   },
-  "plugins": [
-    "react"
-  ]
+  "plugins": ["react"]
 }
